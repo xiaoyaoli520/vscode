@@ -6,5 +6,8 @@
   "private": true,
   "devDependencies": {
     "gulp-watch": "^4.3.9"
+  },
+  "resolutions": {
+    "chokidar": "microsoft/chokidar#fsevents2"
   }
 }
