@@ -89,7 +89,7 @@
 	vertical-align: middle;
 	display: flex;
 	display: -webkit-flex;
-	flex:1;
+	flex: 1;
 }
 
 .monaco-editor .find-widget .matchesCount {
@@ -139,11 +139,11 @@
 	left: 0;
 	width: 18px;
 	height: 100%;
-	-webkit-box-sizing:	border-box;
-	-o-box-sizing:		border-box;
-	-moz-box-sizing:	border-box;
-	-ms-box-sizing:		border-box;
-	box-sizing:			border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .monaco-editor .find-widget .button.toggle.disabled {
@@ -151,11 +151,27 @@
 }
 
 .monaco-editor .find-widget .previous {
-	background-image: url('images/previous.svg');
+	background-image: url("images/previous.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .previous::before {
+	-webkit-mask-image: url("images/previous-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .previous::before {
+	-webkit-mask-image: url("images/previous-alt2.svg");
 }
 
 .monaco-editor .find-widget .next {
-	background-image: url('images/next.svg');
+	background-image: url("images/next.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .next::before {
+	-webkit-mask-image: url("images/next-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .next::before {
+	-webkit-mask-image: url("images/next-alt2.svg");
 }
 
 .monaco-editor .find-widget .disabled {
@@ -172,11 +188,11 @@
 }
 
 .monaco-editor .find-widget .monaco-checkbox .label {
-	content: '';
+	content: "";
 	display: inline-block;
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	background-image: url('images/cancelSelectionFind.svg');
+	background-image: url("images/cancelSelectionFind.svg");
 	width: 20px;
 	height: 20px;
 	border: none;
@@ -192,7 +208,7 @@
 }
 
 .monaco-editor .find-widget .monaco-checkbox .checkbox:not(:disabled):hover:before + .label {
-	background-color: #DDD;
+	background-color: #ddd;
 }
 
 .monaco-editor .find-widget .monaco-checkbox .checkbox:checked + .label {
@@ -200,23 +216,31 @@
 }
 
 .monaco-editor .find-widget .close-fw {
-	background-image: url('images/close.svg');
+	background-image: url("images/close.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .close-fw::before {
+	-webkit-mask-image: url("images/close-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .close-fw::before {
+	-webkit-mask-image: url("images/close-alt2.svg");
 }
 
 .monaco-editor .find-widget .expand {
-	background-image: url('images/expando-expanded.svg');
+	background-image: url("images/expando-expanded.svg");
 }
 
 .monaco-editor .find-widget .collapse {
-	background-image: url('images/expando-collapsed.svg');
+	background-image: url("images/expando-collapsed.svg");
 }
 
 .monaco-editor .find-widget .replace {
-	background-image: url('images/replace.svg');
+	background-image: url("images/replace.svg");
 }
 
 .monaco-editor .find-widget .replace-all {
-	background-image: url('images/replace-all.svg');
+	background-image: url("images/replace-all.svg");
 }
 
 .monaco-editor .find-widget > .replace-part {
@@ -233,7 +257,7 @@
 /* REDUCED */
 .monaco-editor .find-widget.reduced-find-widget .matchesCount,
 .monaco-editor .find-widget.reduced-find-widget .monaco-checkbox {
-	display:none;
+	display: none;
 }
 
 /* NARROW (SMALLER THAN REDUCED) */
@@ -251,7 +275,7 @@
 .monaco-editor .find-widget.collapsed-find-widget .button.replace,
 .monaco-editor .find-widget.collapsed-find-widget .button.replace-all,
 .monaco-editor .find-widget.collapsed-find-widget > .find-part .monaco-findInput .controls {
-	display:none;
+	display: none;
 }
 
 .monaco-editor .findMatch {
@@ -272,17 +296,25 @@
 
 .monaco-editor.hc-black .find-widget .previous,
 .monaco-editor.vs-dark .find-widget .previous {
-	background-image: url('images/previous-inverse.svg');
+	background-image: url("images/previous-inverse.svg");
 }
 
 .monaco-editor.hc-black .find-widget .next,
 .monaco-editor.vs-dark .find-widget .next {
-	background-image: url('images/next-inverse.svg');
+	background-image: url("images/next-inverse.svg");
 }
 
 .monaco-editor.hc-black .find-widget .monaco-checkbox .label,
 .monaco-editor.vs-dark .find-widget .monaco-checkbox .label {
-	background-image: url('images/cancelSelectionFind-inverse.svg');
+	background-image: url("images/cancelSelectionFind-inverse.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .monaco-checkbox .label::before {
+	-webkit-mask-image: url("images/selection-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .monaco-checkbox .label::before {
+	-webkit-mask-image: url("images/selection-alt2.svg");
 }
 
 .monaco-editor.vs-dark .find-widget .monaco-checkbox .checkbox:not(:disabled):hover:before + .label {
@@ -295,27 +327,53 @@
 
 .monaco-editor.hc-black .find-widget .close-fw,
 .monaco-editor.vs-dark .find-widget .close-fw {
-	background-image: url('images/close-dark.svg');
+	background-image: url("images/close-dark.svg");
 }
 
 .monaco-editor.hc-black .find-widget .replace,
 .monaco-editor.vs-dark .find-widget .replace {
-	background-image: url('images/replace-inverse.svg');
+	background-image: url("images/replace-inverse.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .replace::before {
+	-webkit-mask-image: url("images/replace-alt1.svg");
+}
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .replace::before {
+	-webkit-mask-image: url("images/replace-alt2.svg");
 }
 
 .monaco-editor.hc-black .find-widget .replace-all,
 .monaco-editor.vs-dark .find-widget .replace-all {
-	background-image: url('images/replace-all-inverse.svg');
+	background-image: url("images/replace-all-inverse.svg");
+}
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .replace-all::before {
+	-webkit-mask-image: url("images/replace-all-alt1.svg");
+}
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .replace-all::before {
+	-webkit-mask-image: url("images/replace-all-alt2.svg");
 }
 
 .monaco-editor.hc-black .find-widget .expand,
 .monaco-editor.vs-dark .find-widget .expand {
-	background-image: url('images/expando-expanded-dark.svg');
+	background-image: url("images/expando-expanded-dark.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .expand::before {
+	-webkit-mask-image: url("images/expand-alt1.svg");
+}
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .expand::before {
+	-webkit-mask-image: url("images/expand-alt2.svg");
 }
 
 .monaco-editor.hc-black .find-widget .collapse,
 .monaco-editor.vs-dark .find-widget .collapse {
-	background-image: url('images/expando-collapsed-dark.svg');
+	background-image: url("images/expando-collapsed-dark.svg");
+}
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .find-widget .collapse::before {
+	-webkit-mask-image: url("images/collapse-alt1.svg");
+}
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .find-widget .collapse::before {
+	-webkit-mask-image: url("images/collapse-alt2.svg");
 }
 
 .monaco-editor.hc-black .find-widget .button:not(.disabled):hover,
