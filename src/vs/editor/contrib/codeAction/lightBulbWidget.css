@@ -25,3 +25,20 @@
 .monaco-editor.hc-black .lightbulb-glyph {
 	background: url('lightbulb-dark.svg') center center no-repeat;
 }
+
+body[data-icon-theme^="icon-explorations-"] .monaco-editor .lightbulb-glyph {
+	background-image: none !important;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: 16px;
+}
+
+body[data-icon-theme="icon-explorations-1"] .monaco-editor .lightbulb-glyph {
+	-webkit-mask-image: url('lightbulb-alt1.svg');
+	background-color: var(--yellow)
+}
+
+body[data-icon-theme="icon-explorations-2"] .monaco-editor .lightbulb-glyph {
+	-webkit-mask-image: url('lightbulb-alt2.svg');
+	background-color: var(--yellow)
+}

@@ -3,8 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-body[data-icon-theme^="icon-explorations-"] .markers-panel-action-filter>.markers-panel-filter-controls>.markers-panel-filter-filesExclude {
+body[data-icon-theme^="icon-explorations-"] .markers-panel-action-filter>.markers-panel-filter-controls>.markers-panel-filter-filesExclude,
+body[data-icon-theme^="icon-explorations-"] .markers-panel .marker-icon {
 	background: var(--gray);
+}
+
+body[data-icon-theme^="icon-explorations-"] .markers-panel .marker-icon,
+body[data-icon-theme^="icon-explorations-"] .markers-panel .monaco-tl-contents .actions .action-label.icon.markers-panel-action-quickfix {
+	background-image: none !important;
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center center;
+	-webkit-mask-size: 16px;
 }
 
 .monaco-action-bar .action-item.markers-panel-action-filter-container {
@@ -180,12 +189,42 @@ body[data-icon-theme="icon-explorations-2"] .markers-panel-action-filter>.marker
 	background: url('status-warning.svg') center center no-repeat;
 }
 
+body[data-icon-theme="icon-explorations-1"] .markers-panel .marker-icon.warning {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/warning-alt1.svg');
+	background: var(--yellow);
+}
+
+body[data-icon-theme="icon-explorations-2"] .markers-panel .marker-icon.warning {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/warning-alt2.svg');
+	background: var(--yellow);
+}
+
 .markers-panel .marker-icon.error {
 	background: url('status-error.svg') center center no-repeat;
 }
 
+body[data-icon-theme="icon-explorations-1"] .markers-panel .marker-icon.error {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/error-alt1.svg');
+	background: var(--redLight);
+}
+
+body[data-icon-theme="icon-explorations-2"] .markers-panel .marker-icon.error {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/error-alt2.svg');
+	background: var(--redLight);
+}
+
 .markers-panel .marker-icon.info {
 	background: url('status-info.svg') center center no-repeat;
+}
+
+body[data-icon-theme="icon-explorations-1"] .markers-panel .marker-icon.info {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/info-alt1.svg');
+	background: var(--blue);
+}
+
+body[data-icon-theme="icon-explorations-2"] .markers-panel .marker-icon.info {
+	-webkit-mask-image: url('../../../../browser/parts/notifications/media/info-alt2.svg');
+	background: var(--blue);
 }
 
 .vs-dark .markers-panel .marker-icon.warning {
@@ -207,6 +246,16 @@ body[data-icon-theme="icon-explorations-2"] .markers-panel-action-filter>.marker
 
 .vs-dark .markers-panel .monaco-tl-contents .actions .action-label.icon.markers-panel-action-quickfix {
 	background: url('lightbulb-dark.svg') center/80% no-repeat;
+}
+
+body[data-icon-theme="icon-explorations-1"] .markers-panel .monaco-tl-contents .actions .action-label.icon.markers-panel-action-quickfix {
+	-webkit-mask-image: url('../../../../../../vs/editor/contrib/codeAction/lightbulb-alt1.svg');
+	background-color: var(--yellow)
+}
+
+body[data-icon-theme="icon-explorations-2"] .markers-panel .monaco-tl-contents .actions .action-label.icon.markers-panel-action-quickfix {
+	-webkit-mask-image: url('../../../../../../vs/editor/contrib/codeAction/lightbulb-alt2.svg');
+	background-color: var(--yellow)
 }
 
 .markers-panel .monaco-tl-contents .actions .monaco-action-bar {
