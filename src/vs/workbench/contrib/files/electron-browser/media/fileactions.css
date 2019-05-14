@@ -165,7 +165,7 @@ body[data-icon-theme="icon-explorations-2"] .monaco-workbench .explorer-action.r
 }
 
 body[data-icon-theme="icon-explorations-1"] .monaco-workbench .explorer-action.collapse-explorer {
-	background: url('CollapseAll-alt1.svg');g
+	background: url('CollapseAll-alt1.svg');
 }
 
 body[data-icon-theme="icon-explorations-2"] .monaco-workbench .explorer-action.collapse-explorer {
