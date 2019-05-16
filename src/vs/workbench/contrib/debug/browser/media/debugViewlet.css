@@ -4,7 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 
 body[data-icon-theme^="icon-explorations-"] .monaco-workbench .debug-action,
-body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .icon,
+body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .actions-container[aria-label^="Explorer"] .icon,
+body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .actions-container[aria-label="Search actions"] .icon,
+body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .actions-container[aria-label="Source Control: Git actions"] .icon,
+body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .actions-container[aria-label="Debug actions"] .icon,
+body[data-icon-theme^="icon-explorations-"] .monaco-workbench .part > .title > .title-actions .actions-container[aria-label="Extensions actions"] .icon,
 body[data-icon-theme^="icon-explorations-"] .monaco-workbench .debug-toolbar .drag-area,
 body[data-icon-theme^="icon-explorations-"] .monaco-editor .debug-top-stack-frame,
 body[data-icon-theme^="icon-explorations-"] .debug-breakpoint,
@@ -49,12 +53,12 @@ body[data-icon-theme^="icon-explorations-"] .debug-viewlet .monaco-panel-view .p
 body[data-icon-theme="icon-explorations-1"] .monaco-workbench .debug-action.start,
 body[data-icon-theme="icon-explorations-1"] .monaco-workbench .part > .title > .title-actions .start-debug-action-item .icon {
 	-webkit-mask-image: url("start-alt1.svg");
-	background: var(--green);
+	background: var(--green) !important;
 }
 body[data-icon-theme="icon-explorations-2"] .monaco-workbench .debug-action.start,
 body[data-icon-theme="icon-explorations-2"] .monaco-workbench .part > .title > .title-actions .start-debug-action-item .icon {
 	-webkit-mask-image: url("start-alt2.svg");
-	background: var(--green);
+	background: var(--green) !important;
 }
 
 .monaco-workbench .debug-action.toggle-repl {
@@ -473,10 +477,10 @@ body[data-icon-theme="icon-explorations-2"] .debug-viewlet .debug-action.remove-
 	background: url("breakpoints-activate-inverse.svg") center center no-repeat;
 }
 
-body[data-icon-theme="icon-explorations-1"]  .debug-viewlet .debug-action.breakpoints-activate {
+body[data-icon-theme="icon-explorations-1"] .debug-viewlet .debug-action.breakpoints-activate {
 	-webkit-mask-image: url("breakpoint-activate-alt1.svg");
 }
-body[data-icon-theme="icon-explorations-2"]  .debug-viewlet .debug-action.breakpoints-activate {
+body[data-icon-theme="icon-explorations-2"] .debug-viewlet .debug-action.breakpoints-activate {
 	-webkit-mask-image: url("breakpoint-activate-alt2.svg");
 }
 
