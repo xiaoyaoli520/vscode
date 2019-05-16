@@ -17,7 +17,8 @@ body[data-icon-theme^="icon-explorations-"] .breakpoint .icon,
 body[data-icon-theme^="icon-explorations-"] .monaco-editor .debug-focused-stack-frame,
 body[data-icon-theme^="icon-explorations-"] .debug-breakpoint-log-disabled,
 body[data-icon-theme^="icon-explorations-"] .debug-viewlet .debug-action,
-body[data-icon-theme^="icon-explorations-"] .monaco-panel-view .panel > .panel-header > .actions .action-label.icon {
+body[data-icon-theme^="icon-explorations-"] .explorer-viewlet .monaco-panel-view .panel > .panel-header > .actions .action-label.icon,
+body[data-icon-theme^="icon-explorations-"] .debug-viewlet .monaco-panel-view .panel > .panel-header > .actions .action-label.icon {
 	background: var(--gray);
 	background-image: none !important;
 	-webkit-mask-repeat: no-repeat;
