@@ -24,20 +24,59 @@
 }
 
 .extension-ratings.small > .star {
-	width: 10px;
+	width: 12px;
 	height: 10px;
 }
 
+body[data-icon-theme^="icon-explorations-"] .extension-ratings.small > .star,
+body[data-icon-theme^="icon-explorations-"] .extension-ratings > .star {
+	background-image: none !important;
+	background: var(--orangeLight);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: left center;
+	-webkit-mask-size: 12px;
+}
+
+body[data-icon-theme^="icon-explorations-"] .extension-ratings > .star {
+	-webkit-mask-size: 16px;
+}
+
 .extension-ratings > .full {
-	background-image: url('FullStarLight.svg');
+	background-image: url("FullStarLight.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .extension-ratings > .full {
+	-webkit-mask-image: url("star-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .extension-ratings > .full {
+	-webkit-mask-image: url("star-alt2.svg");
 }
 
 .extension-ratings > .half {
-	background-image: url('HalfStarLight.svg');
+	background-image: url("HalfStarLight.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .extension-ratings > .half {
+	-webkit-mask-image: url("star-half-alt1.svg");
+}
+
+body[data-icon-theme="icon-explorations-2"] .extension-ratings > .half {
+	-webkit-mask-image: url("star-half-alt2.svg");
 }
 
 .extension-ratings > .empty {
-	background-image: url('EmptyStar.svg');
+	background-image: url("EmptyStar.svg");
+}
+
+body[data-icon-theme="icon-explorations-1"] .extension-ratings > .empty {
+	-webkit-mask-image: url("star-alt1.svg");
+	background-color: var(--gray);
+}
+
+body[data-icon-theme="icon-explorations-2"] .extension-ratings > .empty {
+	-webkit-mask-image: url("star-alt2.svg");
+	background-color: var(--gray);
 }
 
 .extension-ratings > .count {
