@@ -36,10 +36,6 @@
 	cursor: default;
 }
 
-.monaco-action-bar.animated .action-item.active {
-	transform: scale(1.272019649, 1.272019649); /* 1.272019649 = √φ */
-}
-
 .monaco-action-bar .action-item .icon {
 	display: inline-block;
 }
