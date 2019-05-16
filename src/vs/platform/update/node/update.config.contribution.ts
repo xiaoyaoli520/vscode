@@ -17,7 +17,7 @@ configurationRegistry.registerConfiguration({
 		'update.channel': {
 			type: 'string',
 			enum: ['none', 'manual', 'default'],
-			default: 'default',
+			default: 'none',
 			scope: ConfigurationScope.APPLICATION,
 			description: localize('updateChannel', "Configure whether you receive automatic updates from an update channel. Requires a restart after change. The updates are fetched from a Microsoft online service."),
 			tags: ['usesOnlineServices'],
