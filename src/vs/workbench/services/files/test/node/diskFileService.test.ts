@@ -1499,10 +1499,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - file - multiple writes', done => {
-		if (isWindows) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const toWatch = URI.file(join(testDir, 'index-watch1.html'));
 		writeFileSync(toWatch.fsPath, 'Init');
 
@@ -1563,10 +1559,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - change file', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch3'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1579,10 +1571,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - add file', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch4'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1594,10 +1582,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - delete file', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch5'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1610,10 +1594,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - add folder', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch6'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1625,10 +1605,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - delete folder', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch7'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1641,10 +1617,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - symbolic link - change file', async done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'deep-link'));
 		await symlink(join(testDir, 'deep'), watchDir.fsPath);
 
@@ -1657,10 +1629,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - rename file', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch8'));
 		mkdirSync(watchDir.fsPath);
 
@@ -1675,10 +1643,6 @@ suite('Disk File Service', () => {
 	});
 
 	test('watch - folder (non recursive) - rename file (different case)', done => {
-		if (!isLinux) {
-			return done(); // watch tests are flaky on other platforms
-		}
-
 		const watchDir = URI.file(join(testDir, 'watch8'));
 		mkdirSync(watchDir.fsPath);
 
